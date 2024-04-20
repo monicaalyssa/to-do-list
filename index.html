@@ -4,18 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-Do List</title>
-    <link rel="stylesheet" src="css/styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>To do list</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
 
 </head>
 
 <body>
+    <div class="box-container">
+        <h1>To do list</h1>
+        <p>double click to cross out an item</p>
+        <div class="additem">
+            <form name="toDoList" onsubmit="newItem();return false">
+                <input type="text" placeholder="Add item" name="ListItem" id="input">
+            </form>
+            <div onclick="newItem()" id="button">Add</div>
+        </div>
+        <ol id="list"></ol>
+        <div onclick="clearAll()" id="clearall">Clear all</div>
+        <div id="modalcontainer"></div>
+    </div>
 
-
-
-    
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
 
